@@ -1,0 +1,45 @@
+# Don't publish real configuration with project data
+config/tracking-config.json
+
+# Don't publish environment files (but keep .env.example)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Don't publish git files
+.git
+.gitignore
+.gitattributes
+
+# Don't publish development files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Don't publish logs
+logs/
+*.log
+
+# Don't publish test coverage
+coverage/
+.nyc_output/
+
+# Don't publish Claude settings (these may contain local paths)
+.claude/
+
+# Don't publish ORCHESTRAI-specific files (these are for your internal use)
+CLAUDE.md
+STANDALONE-SETUP-COMPLETE.md
+agents/
+pipelines/
+seo-agent-config.json
+seo-domain-agent.js
+seo-domain-hub.js
+tests/
+
+# Don't publish backup files
+*.backup
+*.old

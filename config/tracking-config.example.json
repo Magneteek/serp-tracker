@@ -1,0 +1,154 @@
+{
+  "trackingConfig": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-11-05",
+    "defaultSettings": {
+      "locationCode": 2840,
+      "locationName": "United States",
+      "device": "desktop",
+      "trackingFrequency": "weekly",
+      "priority": "medium",
+      "dataSource": "dataforseo"
+    },
+    "schedules": {
+      "daily": {
+        "time": "02:00",
+        "timezone": "America/New_York",
+        "enabled": true
+      },
+      "weekly": {
+        "time": "09:00",
+        "dayOfWeek": 1,
+        "timezone": "America/New_York",
+        "enabled": true
+      },
+      "monthly": {
+        "time": "10:00",
+        "dayOfMonth": 1,
+        "timezone": "America/New_York",
+        "enabled": true
+      }
+    },
+    "alertThresholds": {
+      "critical": {
+        "positionDrop": 10,
+        "dropOutOfTop": 10,
+        "enabled": true,
+        "notificationChannels": ["webhook", "notion"]
+      },
+      "warning": {
+        "positionDrop": 5,
+        "ctrDropPercentage": 20,
+        "enabled": true,
+        "notificationChannels": ["notion"]
+      },
+      "opportunity": {
+        "enterTopN": 20,
+        "lowCtrThreshold": 0.02,
+        "minImpressions": 100,
+        "enabled": true,
+        "notificationChannels": ["notion"]
+      },
+      "competitor": {
+        "competitorEntersTopN": 3,
+        "enabled": true,
+        "notificationChannels": ["webhook"]
+      }
+    },
+    "apiLimits": {
+      "dataForSEO": {
+        "batchSize": 10,
+        "delayBetweenBatches": 2000,
+        "maxRequestsPerMinute": 30,
+        "cacheTimeout": 3600000
+      },
+      "googleSearchConsole": {
+        "maxRowsPerRequest": 1000,
+        "dateRangeMaxDays": 90,
+        "delayBetweenRequests": 1000
+      },
+      "notion": {
+        "requestsPerSecond": 3,
+        "batchSize": 100
+      }
+    },
+    "projects": {
+      "example-uuid-1234-5678-90ab-cdef12345678": {
+        "name": "Example Website",
+        "siteUrl": "sc-domain:example.com",
+        "location": {
+          "code": 2840,
+          "name": "United States",
+          "language": "English"
+        },
+        "competitors": [
+          "competitor1.com",
+          "competitor2.com",
+          "competitor3.com"
+        ],
+        "keywords": {
+          "high": [
+            {
+              "keyword": "best seo tools",
+              "targetPosition": 1,
+              "trackingFrequency": "daily",
+              "searchVolume": 5000
+            },
+            {
+              "keyword": "keyword research tool",
+              "targetPosition": 3,
+              "trackingFrequency": "daily",
+              "searchVolume": 3500
+            }
+          ],
+          "medium": [
+            {
+              "keyword": "serp tracking software",
+              "targetPosition": 5,
+              "trackingFrequency": "weekly",
+              "searchVolume": 1200
+            },
+            {
+              "keyword": "rank tracking tool",
+              "targetPosition": 5,
+              "trackingFrequency": "weekly",
+              "searchVolume": 800
+            }
+          ],
+          "low": [
+            {
+              "keyword": "how to track keyword rankings",
+              "targetPosition": 10,
+              "trackingFrequency": "monthly",
+              "searchVolume": 500
+            }
+          ]
+        }
+      }
+    },
+    "notionConfig": {
+      "enabled": false,
+      "workspaceId": "",
+      "databaseIds": {
+        "keywords": "",
+        "positionHistory": "",
+        "competitors": "",
+        "alerts": ""
+      },
+      "syncSettings": {
+        "syncOnTracking": true,
+        "syncInterval": "daily",
+        "createDashboards": true
+      }
+    },
+    "webhookConfig": {
+      "enabled": false,
+      "endpoints": {
+        "slack": "",
+        "discord": "",
+        "custom": ""
+      },
+      "alertTypes": ["critical", "warning"]
+    }
+  }
+}

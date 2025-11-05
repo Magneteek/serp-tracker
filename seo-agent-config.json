@@ -1,0 +1,210 @@
+{
+  "agentInfo": {
+    "name": "SEO Domain Agent",
+    "version": "3.0.0",
+    "domain": "seo",
+    "description": "Comprehensive SEO analysis, keyword research, and competitor intelligence agent",
+    "author": "ORCHESTRAI System",
+    "capabilities": [
+      "keyword-research",
+      "competitor-analysis",
+      "serp-analysis", 
+      "backlink-analysis",
+      "content-gap-analysis",
+      "technical-seo-audit",
+      "local-seo-analysis",
+      "content-optimization"
+    ]
+  },
+  
+  "configuration": {
+    "taskProcessing": {
+      "maxConcurrentTasks": 3,
+      "queueSizeLimit": 50,
+      "processingInterval": 1000,
+      "taskTimeout": 300000,
+      "retryAttempts": 3
+    },
+    
+    "priorities": {
+      "keyword-research": "high",
+      "competitor-analysis": "high", 
+      "content-optimization": "medium",
+      "technical-audit": "medium",
+      "serp-analysis": "low"
+    },
+    
+    "dataForSEO": {
+      "enabled": true,
+      "endpoints": {
+        "keywordResearch": "/v3/dataforseo_labs/google/keyword_suggestions/live",
+        "serpAnalysis": "/v3/serp/google/organic/live", 
+        "competitorAnalysis": "/v3/dataforseo_labs/google/competitors_domain/live",
+        "backlinks": "/v3/backlinks/summary/live"
+      },
+      "rateLimits": {
+        "requestsPerMinute": 2000,
+        "requestsPerHour": 20000
+      },
+      "defaultParams": {
+        "language_code": "en",
+        "location_code": 2840,
+        "device": "desktop"
+      }
+    },
+    
+    "memoryConfiguration": {
+      "poolName": "seo-intelligence",
+      "retentionPeriod": "90d",
+      "maxStorageSize": "1GB",
+      "compressionEnabled": true,
+      "categories": [
+        "keyword-data",
+        "competitor-profiles",
+        "serp-patterns", 
+        "content-opportunities",
+        "technical-insights",
+        "market-trends",
+        "backlink-data",
+        "local-seo-data"
+      ]
+    }
+  },
+  
+  "integrations": {
+    "mcpServers": [
+      {
+        "name": "dataforseo",
+        "required": true,
+        "fallbackMode": "mock-data"
+      },
+      {
+        "name": "memory", 
+        "required": true,
+        "fallbackMode": "local-storage"
+      },
+      {
+        "name": "sequential-thinking",
+        "required": false,
+        "purpose": "complex-analysis"
+      }
+    ],
+    
+    "orchestrator": {
+      "registerOnStart": true,
+      "heartbeatInterval": 30000,
+      "metricsReporting": true,
+      "taskAssignment": "automatic"
+    },
+    
+    "crystallineMemory": {
+      "enableSharing": true,
+      "shareWith": ["writer", "research", "webdev"],
+      "syncInterval": 60000
+    }
+  },
+  
+  "templates": {
+    "keywordReport": {
+      "path": "/orchestrai-system/templates/global/content-templates/seo-structures/keyword-report.md",
+      "variables": ["primaryKeyword", "relatedKeywords", "searchVolume", "difficulty"]
+    },
+    
+    "competitorAnalysis": {
+      "path": "/orchestrai-system/templates/global/content-templates/seo-structures/competitor-analysis.md", 
+      "variables": ["targetDomain", "competitors", "opportunities", "threats"]
+    },
+    
+    "technicalAudit": {
+      "path": "/orchestrai-system/templates/global/content-templates/seo-structures/technical-audit.md",
+      "variables": ["url", "issues", "recommendations", "priority"]
+    },
+    
+    "contentOptimization": {
+      "path": "/orchestrai-system/templates/global/content-templates/seo-structures/content-optimization.md",
+      "variables": ["targetKeywords", "currentContent", "optimizedContent", "improvements"]
+    }
+  },
+  
+  "deliverables": {
+    "outputPath": "/projects/{projectUUID}/deliverables/seo/",
+    "fileNaming": {
+      "keywordResearch": "keyword-research-{timestamp}.json",
+      "competitorAnalysis": "competitor-analysis-{domain}-{timestamp}.json", 
+      "technicalAudit": "technical-audit-{domain}-{timestamp}.json",
+      "contentOptimization": "content-optimization-{timestamp}.json"
+    },
+    
+    "formats": {
+      "json": {
+        "enabled": true,
+        "pretty": true
+      },
+      "markdown": {
+        "enabled": true,
+        "useTemplates": true
+      },
+      "csv": {
+        "enabled": true,
+        "delimiter": ","
+      }
+    }
+  },
+  
+  "monitoring": {
+    "metrics": {
+      "trackTaskCompletion": true,
+      "trackProcessingTime": true,
+      "trackErrorRates": true,
+      "trackResourceUsage": true
+    },
+    
+    "alerts": {
+      "taskFailureThreshold": 5,
+      "processingTimeThreshold": 60000,
+      "queueSizeThreshold": 30,
+      "errorRateThreshold": 0.1
+    },
+    
+    "logging": {
+      "level": "info",
+      "includeStackTrace": true,
+      "logRotation": "daily",
+      "maxLogSize": "100MB"
+    }
+  },
+  
+  "businessLogic": {
+    "keywordPrioritization": {
+      "factors": {
+        "searchVolume": 0.3,
+        "difficulty": 0.25,
+        "relevance": 0.25,
+        "conversionPotential": 0.2
+      },
+      "thresholds": {
+        "minSearchVolume": 100,
+        "maxDifficulty": 80,
+        "minRelevance": 70
+      }
+    },
+    
+    "competitorSelection": {
+      "maxCompetitors": 10,
+      "selectionCriteria": [
+        "domain-authority", 
+        "organic-traffic",
+        "keyword-overlap",
+        "market-presence"
+      ],
+      "analysisDepth": "comprehensive"
+    },
+    
+    "contentOptimization": {
+      "targetKeywordDensity": 0.02,
+      "minContentLength": 500,
+      "maxContentLength": 3000,
+      "readabilityTarget": "grade-8"
+    }
+  }
+}

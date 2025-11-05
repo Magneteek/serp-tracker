@@ -1,0 +1,54 @@
+{
+  "name": "@orchestrai/serp-tracker",
+  "version": "1.0.0",
+  "description": "Professional SERP position tracking tool using DataForSEO API and PostgreSQL - Track keyword rankings, monitor competitors, and get automated alerts",
+  "main": "lib/serp-tracker.js",
+  "bin": {
+    "serp-tracker": "./bin/serp-tracker.js"
+  },
+  "scripts": {
+    "setup": "node scripts/setup-project.js",
+    "track:high": "node scripts/track-priority-keywords.js --priority high",
+    "track:medium": "node scripts/track-priority-keywords.js --priority medium",
+    "track:low": "node scripts/track-priority-keywords.js --priority low",
+    "track": "node scripts/track-priority-keywords.js",
+    "dashboard": "node scripts/dashboard.js",
+    "sync:gsc": "node scripts/sync-gsc-data.js --all",
+    "sync:notion": "node scripts/sync-to-notion.js",
+    "import": "node scripts/track-priority-keywords.js --import",
+    "test": "node scripts/track-priority-keywords.js --dry-run --priority high"
+  },
+  "keywords": [
+    "seo",
+    "serp",
+    "tracking",
+    "keyword-tracking",
+    "rank-tracking",
+    "position-tracking",
+    "dataforseo",
+    "google-search-console",
+    "seo-tools",
+    "search-engine-optimization",
+    "keyword-monitor",
+    "serp-monitor"
+  ],
+  "author": "ORCHESTRAI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Magneteek/serp-tracker"
+  },
+  "bugs": {
+    "url": "https://github.com/Magneteek/serp-tracker/issues"
+  },
+  "homepage": "https://github.com/Magneteek/serp-tracker#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "pg": "^8.11.3",
+    "axios": "^1.6.2",
+    "@notionhq/client": "^2.2.14",
+    "dotenv": "^16.3.1"
+  }
+}
