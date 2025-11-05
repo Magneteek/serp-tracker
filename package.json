@@ -1,10 +1,10 @@
 {
-  "name": "@orchestrai/serp-tracker",
+  "name": "@magneteek/serp-tracker",
   "version": "1.0.0",
   "description": "Professional SERP position tracking tool using DataForSEO API and PostgreSQL - Track keyword rankings, monitor competitors, and get automated alerts",
   "main": "lib/serp-tracker.js",
   "bin": {
-    "serp-tracker": "./bin/serp-tracker.js"
+    "serp-tracker": "bin/serp-tracker.js"
   },
   "scripts": {
     "setup": "node scripts/setup-project.js",
@@ -36,7 +36,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Magneteek/serp-tracker"
+    "url": "git+https://github.com/Magneteek/serp-tracker.git"
   },
   "bugs": {
     "url": "https://github.com/Magneteek/serp-tracker/issues"

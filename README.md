@@ -4,7 +4,7 @@
 
 Track your keyword rankings across Google search results with precision, automation, and beautiful visualizations. Built with DataForSEO API and PostgreSQL for reliable, cost-effective SERP monitoring.
 
-[![npm version](https://img.shields.io/npm/v/@orchestrai/serp-tracker.svg)](https://www.npmjs.com/package/@orchestrai/serp-tracker)
+[![npm version](https://img.shields.io/npm/v/@magneteek/serp-tracker.svg)](https://www.npmjs.com/package/@magneteek/serp-tracker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
 
@@ -49,10 +49,10 @@ Track your keyword rankings across Google search results with precision, automat
 
 ```bash
 # Global installation
-npm install -g @orchestrai/serp-tracker
+npm install -g @magneteek/serp-tracker
 
 # Or use npx (no installation)
-npx @orchestrai/serp-tracker setup
+npx @magneteek/serp-tracker setup
 ```
 
 ### Initial Setup
@@ -442,4 +442,4 @@ If this tool helps your SEO workflow, please consider:
 
 **Built with ❤️ by ORCHESTRAI**
 
-[npm](https://www.npmjs.com/package/@orchestrai/serp-tracker) • [GitHub](https://github.com/yourusername/serp-tracker) • [Documentation](https://github.com/yourusername/serp-tracker/wiki)
+[npm](https://www.npmjs.com/package/@magneteek/serp-tracker) • [GitHub](https://github.com/Magneteek/serp-tracker) • [Documentation](https://github.com/Magneteek/serp-tracker/wiki)

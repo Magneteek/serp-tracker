@@ -18,10 +18,10 @@ Complete step-by-step guide to install and configure the SERP Tracker tool.
 
 ```bash
 # Install globally from npm
-npm install -g @orchestrai/serp-tracker
+npm install -g @magneteek/serp-tracker
 
 # Or using npx (no installation required)
-npx @orchestrai/serp-tracker setup
+npx @magneteek/serp-tracker setup
 ```
 
 ### Method 2: Local Installation (Recommended for customization)
@@ -411,7 +411,7 @@ docker stop serp-postgres
 docker rm serp-postgres
 
 # Remove global installation
-npm uninstall -g @orchestrai/serp-tracker
+npm uninstall -g @magneteek/serp-tracker
 
 # Or delete local directory
 rm -rf /path/to/serp-tracker

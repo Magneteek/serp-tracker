@@ -119,7 +119,7 @@ npm pack
 # Publish to npm
 npm publish --access public
 
-# If using scoped package (@orchestrai/serp-tracker)
+# If using scoped package (@magneteek/serp-tracker)
 npm publish --access public
 ```
 
@@ -129,10 +129,10 @@ npm publish --access public
 
 ```bash
 # Check on npm
-npm info @orchestrai/serp-tracker
+npm info @magneteek/serp-tracker
 
 # Or visit
-# https://www.npmjs.com/package/@orchestrai/serp-tracker
+# https://www.npmjs.com/package/@magneteek/serp-tracker
 ```
 
 ---
@@ -166,7 +166,7 @@ Professional SERP tracking tool with DataForSEO integration and PostgreSQL stora
 ### 📦 Installation
 
 ```bash
-npm install -g @orchestrai/serp-tracker
+npm install -g @magneteek/serp-tracker
 ```
 
 ### 🚀 Quick Start
@@ -358,7 +358,7 @@ Share on:
 🎨 Beautiful CLI dashboard
 💰 ~$1/month for 50 keywords
 
-Try it: npm i -g @orchestrai/serp-tracker
+Try it: npm i -g @magneteek/serp-tracker
 
 #SEO #OpenSource #NodeJS
 ```
@@ -370,7 +370,7 @@ Try it: npm i -g @orchestrai/serp-tracker
 ### Monitoring
 
 - Watch GitHub issues
-- Monitor npm download stats: `npm info @orchestrai/serp-tracker`
+- Monitor npm download stats: `npm info @magneteek/serp-tracker`
 - Check security vulnerabilities: `npm audit`
 
 ### Regular Updates
@@ -413,10 +413,10 @@ If you need to unpublish (not recommended):
 
 ```bash
 # Unpublish specific version
-npm unpublish @orchestrai/serp-tracker@1.0.0
+npm unpublish @magneteek/serp-tracker@1.0.0
 
 # Unpublish entire package (within 72 hours of publish)
-npm unpublish @orchestrai/serp-tracker --force
+npm unpublish @magneteek/serp-tracker --force
 ```
 
 **Note:** npm discourages unpublishing. Instead, publish a new fixed version.
@@ -426,12 +426,12 @@ npm unpublish @orchestrai/serp-tracker --force
 ## Success! 🎉
 
 Your package is now live:
-- **npm:** `https://www.npmjs.com/package/@orchestrai/serp-tracker`
+- **npm:** `https://www.npmjs.com/package/@magneteek/serp-tracker`
 - **GitHub:** `https://github.com/yourusername/serp-tracker`
 
 Users can now install with:
 ```bash
-npm install -g @orchestrai/serp-tracker
+npm install -g @magneteek/serp-tracker
 ```
 
 ---
